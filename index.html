@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prime Analytics — Ведение кабинета Wildberries</title>
+    <meta
+      name="description"
+      content="Агентство по ведению кабинетов на маркетплейсе Wildberries: запуск, аналитика, SEO, дизайн, реклама."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkfF9YlLx2F8bP8O9GZyCNRZqVYIpuG1Hs2nqQf0Cw2jFh5rG1rj7lj2Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Анимированный фон + параллакс-слои -->
+    <div class="bg-gradient"></div>
+    <div class="bg-orb orb-1 parallax" data-speed="0.2"></div>
+    <div class="bg-orb orb-2 parallax" data-speed="0.35"></div>
+    <div class="bg-orb orb-3 parallax" data-speed="0.15"></div>
+
+    <!-- Навигация -->
+    <header class="navbar glass">
+      <a class="logo" href="index.html"><span>Prime</span> Analytics</a>
+      <nav id="nav-menu" class="nav-links">
+        <a href="index.html" class="active">Главная</a>
+        <a href="services.html">Услуги</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <button
+        class="burger"
+        id="burger"
+        aria-label="Открыть меню"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <!-- Герой-секция с эффектом liquid glass -->
+    <main>
+      <section class="hero">
+        <div class="hero-inner glass reveal">
+          <h1>Ведение <span class="wb">Wildberries</span> под ключ</h1>
+          <p>
+            Запускаем, продвигаем и масштабируем продажи на WB: аналитика,
+            карточки, SEO, реклама и полное сопровождение бренда.
+          </p>
+          <div class="hero-cta">
+            <a href="#lead" class="btn btn-primary glow">Оставить заявку</a>
+            <a href="services.html" class="btn btn-ghost">Наши услуги</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Блок преимуществ -->
+      <section class="features">
+        <div class="container">
+          <div class="grid-3">
+            <article class="feature glass reveal">
+              <i class="fa-solid fa-chart-line"></i>
+              <h3>Аналитика</h3>
+              <p>Точные метрики, бюджеты и прогнозы роста продаж.</p>
+            </article>
+            <article class="feature glass reveal">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+              <h3>Дизайн</h3>
+              <p>
+                Карточки с высоким CTR: инфографика, A/B, визуальная стратегия.
+              </p>
+            </article>
+            <article class="feature glass reveal">
+              <i class="fa-solid fa-rocket"></i>
+              <h3>Запуск</h3>
+              <p>
+                Фулфилмент, SEO, ставки, рекламные кампании и масштабирование.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Лид-форма (якорь) -->
+      <section id="lead" class="lead glass reveal">
+        <h2>Получите бесплатный аудит карточек</h2>
+        <form
+          class="lead-form"
+          onsubmit="return window.handleFormSubmit(event)"
+        >
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Ваше имя" required />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Телефон / WhatsApp"
+              required
+            />
+          </div>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email (необязательно)"
+          />
+          <textarea
+            name="message"
+            rows="4"
+            placeholder="Коротко опишите задачи"
+          ></textarea>
+          <button class="btn btn-primary glow" type="submit">Отправить</button>
+        </form>
+        <p class="form-note">
+          Нажимая «Отправить», вы соглашаетесь с обработкой персональных данных.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer glass">
+      <p>
+        © <span id="year"></span> Prime Analytics. Неофициальное агентство
+        Wildberries.
+      </p>
+      <div class="socials">
+        <a href="#" aria-label="Telegram"
+          ><i class="fa-brands fa-telegram"></i
+        ></a>
+        <a href="#" aria-label="WhatsApp"
+          ><i class="fa-brands fa-whatsapp"></i
+        ></a>
+        <a href="#" aria-label="VK"><i class="fa-brands fa-vk"></i></a>
+        <a href="#" aria-label="Instagram"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

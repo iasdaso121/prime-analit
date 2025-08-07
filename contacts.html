@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Контакты — WB Agency</title>
+    <meta
+      name="description"
+      content="Свяжитесь с нами: форма, карта, соцсети."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg-gradient"></div>
+    <div class="bg-orb orb-1 parallax" data-speed="0.25"></div>
+    <div class="bg-orb orb-3 parallax" data-speed="0.15"></div>
+
+    <header class="navbar glass">
+      <a class="logo" href="index.html"><span>WB</span> Agency</a>
+      <nav id="nav-menu" class="nav-links">
+        <a href="index.html">Главная</a>
+        <a href="services.html">Услуги</a>
+        <a href="contacts.html" class="active">Контакты</a>
+      </nav>
+      <button
+        class="burger"
+        id="burger"
+        aria-label="Открыть меню"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <main>
+      <section class="page-title hero-sm">
+        <div class="container">
+          <h1 class="reveal">Связаться с нами</h1>
+          <p class="muted reveal">Ответим в течение рабочего дня.</p>
+        </div>
+      </section>
+
+      <section class="container contact-grid">
+        <div class="contact-card glass reveal">
+          <h2>Форма обратной связи</h2>
+          <form
+            class="contact-form"
+            onsubmit="return window.handleFormSubmit(event)"
+          >
+            <input type="text" name="name" placeholder="Ваше имя" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <input type="tel" name="phone" placeholder="Телефон" />
+            <textarea
+              name="message"
+              rows="5"
+              placeholder="Опишите задачу"
+              required
+            ></textarea>
+            <button class="btn btn-primary glow" type="submit">
+              Отправить
+            </button>
+          </form>
+        </div>
+
+        <div class="contact-card glass reveal">
+          <h2>Мы на карте</h2>
+          <!-- Вариант с Google Maps Embed (без ключа) -->
+          <div class="map-wrap">
+            <iframe
+              title="Карта офиса"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1999.363068259788!2d37.618423!3d55.751244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z55.75LCDQn9C-0LvRj9C90YHQutC40Lkg0JzQuNC90YHQuiDQv9C-0LvRjNC60LjQuQ!5e0!3m2!1sru!2s!4v1690000000000"
+              width="100%"
+              height="300"
+              style="border: 0; border-radius: 16px"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div class="contact-info">
+            <p><i class="fa-solid fa-envelope"></i> hello@wb-agency.example</p>
+            <p><i class="fa-solid fa-phone"></i> +7 (999) 000-00-00</p>
+            <p><i class="fa-brands fa-telegram"></i> @wb_agency</p>
+          </div>
+          <div class="socials">
+            <a href="#" aria-label="Telegram"
+              ><i class="fa-brands fa-telegram"></i
+            ></a>
+            <a href="#" aria-label="WhatsApp"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+            <a href="#" aria-label="VK"><i class="fa-brands fa-vk"></i></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer glass">
+      <p>© <span id="year"></span> WB Agency.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
